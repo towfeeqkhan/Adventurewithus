@@ -134,23 +134,31 @@ img {
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--secondary-color);
+  margin-right: auto;
 }
 
 .highlight {
   color: var(--primary-color);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .nav-menu {
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 
 .nav-link {
@@ -173,6 +181,26 @@ img {
 
 .btn-contact:hover {
   background: var(--primary-hover);
+}
+
+.btn-call {
+  padding: 8px 25px;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 94, 87, 0.3);
+  transition: var(--transition);
+}
+
+.btn-call:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 94, 87, 0.4);
+  color: var(--white);
 }
 
 .menu-toggle {
@@ -668,6 +696,23 @@ footer {
   .hero-stats {
     flex-wrap: wrap;
     gap: 20px;
+  }
+
+  .btn-call {
+    padding: 6px 15px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .btn-call {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    gap: 4px;
   }
 }
 
